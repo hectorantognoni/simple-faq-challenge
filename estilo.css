@@ -1,0 +1,141 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* >>> PRUEBA DE DIAGNÓSTICO <<< */
+.test-blue {
+  background-color: blue !important;
+  color: white !important;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+
+/* Estilo del body: fondo y tipografía */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f7fa;
+  padding: 20px; /* Espacio alrededor */
+}
+
+/* Contenedor principal: centrado horizontal con margen automático */
+.container {
+  max-width: 800px;
+  margin: 0 auto; /* ¡Esto es lo que CENTRA horizontalmente! */
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Estilos del encabezado */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+}
+
+/* Estilo de cada FAQ */
+.faq-item {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-left: 5px solid #3498db;
+}
+
+.faq-item:nth-child(2) {
+  border-left-color: #2ecc71;
+}
+
+.faq-item h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.answer-intro {
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #34495e;
+}
+
+.faq-item ol,
+.faq-item ul {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.faq-item li {
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.note {
+  font-style: italic;
+  color: #7f8c8d;
+  padding-top: 10px;
+  border-top: 1px dashed #ddd;
+  margin-top: 15px;
+}
+
+/* Pie de página: también centrado */
+.author-info {
+  max-width: 800px;
+  margin: 40px auto 0; /* arriba, auto horizontal, abajo 0 */
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  color: #7f8c8d;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.author-info a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.author-info a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive para móviles */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .faq-item {
+    padding: 20px;
+  }
+}
