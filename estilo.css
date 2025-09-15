@@ -20,7 +20,7 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  color: #333;
+  color: black;
   background-color: #f5f7fa;
   padding: 20px; /* Espacio alrededor */
 }
@@ -45,13 +45,13 @@ header {
 
 header h1 {
   font-size: 2.2rem;
-  color: #2c3e50;
+  color: black;
   margin-bottom: 10px;
 }
 
 .subtitle {
   font-size: 1.1rem;
-  color: #090909;
+  color: black;
 }
 
 /* Estilo de cada FAQ */
@@ -68,7 +68,7 @@ header h1 {
 }
 
 .faq-item h2 {
-  color: #0a0e11;
+  color: black;
   margin-bottom: 15px;
   font-size: 1.5rem;
 }
@@ -76,7 +76,7 @@ header h1 {
 .answer-intro {
   font-weight: 500;
   margin-bottom: 15px;
-  color: #080a0b;
+  color: black;
 }
 
 .faq-item ol,
@@ -87,12 +87,12 @@ header h1 {
 
 .faq-item li {
   margin-bottom: 8px;
-  color: #0e0d0d;
+  color:black;
 }
 
 .note {
   font-style: italic;
-  color: #0e0e0e;
+  color: black;
   padding-top: 10px;
   border-top: 1px dashed #ddd;
   margin-top: 15px;
@@ -105,19 +105,19 @@ header h1 {
   text-align: center;
   padding: 15px;
   font-size: 14px;
-  color: #101111;
+  color: black;
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .author-info a {
-  color: #3498db;
+  color: #260cea;
   text-decoration: none;
   font-weight: 600;
 }
 
-.author-info a:hover {
+.author-info a:hover {s
   text-decoration: underline;
 }
 
