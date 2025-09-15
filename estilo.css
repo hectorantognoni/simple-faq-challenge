@@ -51,7 +51,7 @@ header h1 {
 
 .subtitle {
   font-size: 1.1rem;
-  color: black;
+  color: #2c3e50;
 }
 
 /* Estilo de cada FAQ */
@@ -68,7 +68,7 @@ header h1 {
 }
 
 .faq-item h2 {
-  color: black;
+  color: #2c3e50;
   margin-bottom: 15px;
   font-size: 1.5rem;
 }
@@ -76,7 +76,7 @@ header h1 {
 .answer-intro {
   font-weight: 500;
   margin-bottom: 15px;
-  color: black;
+  color: #2c3e50;
 }
 
 .faq-item ol,
@@ -87,10 +87,26 @@ header h1 {
 
 .faq-item li {
   margin-bottom: 8px;
-  color:black;
+  color:#2c3e50;
 }
 
 .note {
+  font-style: italic;
+  color: black;
+  padding-top: 10px;
+  border-top: 1px dashed #ddd;
+  margin-top: 15px;
+}
+
+.noteblue {
+  font-style: italic;
+  color: blue;
+  padding-top: 10px;
+  border-top: 1px dashed #ddd;
+  margin-top: 15px;
+}
+
+.noteblack {
   font-style: italic;
   color: black;
   padding-top: 10px;
@@ -105,7 +121,7 @@ header h1 {
   text-align: center;
   padding: 15px;
   font-size: 14px;
-  color: black;
+  color: #2c3e50;
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
