@@ -1,126 +1,151 @@
-/* Reset básico */
+/* Reset y configuración base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Estilo del body: fondo y tipografía */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  color: black;
+  color: #333;
   background-color: #f5f7fa;
   margin: 0;
   padding: 0;
 }
 
-/* >>> Contenedor de contenido: 1280px máximo, centrado <<< */
-.content-wrapper {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 20px; /* Respiración en pantallas grandes */
-}
-
-/* >>> HEADER: fondo blanco full width, contenido centrado en 1280px <<< */
+/* >>> HEADER: centrado con flex + fondo blanco full width <<< */
 header {
   background: white;
   padding: 40px 0;
   border-bottom: 1px solid #eaeaea;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .header-content {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
 header h1 {
   font-size: 2.2rem;
-  color: black;
+  color: #2c3e50;
   margin-bottom: 10px;
 }
 
 .subtitle {
   font-size: 1.1rem;
-  color: #2c3e50;
+  color: #7f8c8d;
 }
 
-/* >>> CONTENEDOR PRINCIPAL: ahora solo agrupa el main, con ancho 1280px <<< */
+/* >>> CONTENEDOR PRINCIPAL <<< */
 .container {
   max-width: 1280px;
   margin: 0 auto;
   padding: 30px 0;
-  background: transparent;
 }
 
-/* >>> FAQ ITEMS: fondo gris claro, dentro de 1280px <<< */
+/* >>> FAQ ITEMS: FLEX + CENTER + JUSTIFY + VIÑETAS PERFECTAS <<< */
 .faq-item {
   background: #f8f9fa;
   border-radius: 10px;
-  padding: 25px 30px;
+  padding: 30px;
   margin-bottom: 25px;
-  border-left: 5px solid #3498db;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ✅ Centra todos los hijos horizontalmente */
+  text-align: justify; /* ✅ Justifica el texto para bordes rectos */
+  hyphens: auto;
 }
-
+/*   border-left: 5px solid #3498db;     */
+/*
 .faq-item:nth-child(2) {
   border-left-color: #2ecc71;
 }
-
+*/
 .faq-item h2 {
   color: #2c3e50;
   margin-bottom: 15px;
   font-size: 1.5rem;
+  text-align: center; /* Títulos centrados */
+  width: 100%;
+  max-width: 800px; /* Evita que el título se estire demasiado */
 }
 
 .answer-intro {
   font-weight: 500;
   margin-bottom: 15px;
-  color: #2c3e50;
+  color: #34495e;
+  text-align: center; /* Centrado para intro */
+  width: 100%;
+  max-width: 800px;
 }
 
+/* >>> LISTAS: FLEX + INLINE-BLOCK + LIST-STYLE INSIDE <<< */
 .faq-item ol,
 .faq-item ul {
-  padding-left: 20px;
-  margin-bottom: 15px;
+  margin: 15px 0;
+  padding: 0;
+  list-style-position: inside; /* ✅ Viñetas dentro del flujo */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ✅ Centra cada <li> */
+  width: 100%;
+  max-width: 800px; /* Controla ancho máximo para mejor lectura */
 }
 
 .faq-item li {
-  margin-bottom: 8px;
-  color: #2c3e50;
+  margin-bottom: 12px;
+  color: #555;
+  text-align: justify; /* ✅ Justificado para alineación de bordes */
+  line-height: 1.6;
+  width: 100%;
+  padding: 0 10px; /* Respiración interna */
 }
 
-.highlight {
+/* >>> NOTAS Y SPANS <<< */
+.note {
+  font-style: italic;
+  color: #7f8c8d;
+  padding-top: 15px;
+  border-top: 1px dashed #ddd;
+  margin-top: 15px;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+.noteblue {
+  color: #3498db;
+  font-weight: 600;
+}
+
+.noteblack {
   color: #2c3e50;
   font-weight: 600;
 }
 
-.note {
-  font-style: italic;
-  color: black;
-  padding-top: 10px;
-  border-top: 1px dashed #ddd;
-  margin-top: 15px;
-}
-
-/* >>> FOOTER: también limitado a 1280px, centrado <<< */
+/* >>> FOOTER <<< */
 .author-info {
   max-width: 1280px;
   margin: 40px auto 0;
   text-align: center;
   padding: 15px 20px;
   font-size: 14px;
-  color: #2c3e50;
+  color: #7f8c8d;
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .author-info a {
-  color: #260cea;
+  color: #3498db;
   text-decoration: none;
   font-weight: 600;
 }
@@ -129,7 +154,7 @@ header h1 {
   text-decoration: underline;
 }
 
-/* Responsive para móviles */
+/* >>> RESPONSIVE MOBILE <<< */
 @media (max-width: 600px) {
   .header-content,
   .container,
@@ -147,5 +172,16 @@ header h1 {
 
   .faq-item {
     padding: 20px;
+  }
+
+  .faq-item h2,
+  .answer-intro,
+  .note {
+    max-width: 100%;
+  }
+
+  .faq-item li {
+    text-align: left; /* En móvil, justificado puede crear huecos raros */
+    padding: 0;
   }
 }
